@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" href="style.css">
+        <script src="ejs.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="top">
+                <div class="container flex justify-between">
+                    <div class="contact flex items-center">
+                        <img src="icons/phone.svg" alt="">
+                        <div>
+                            <h5>Call US: (+84) 123 456 789</h5>
+                            <h6>E-mail : support@Ignyt.com</h6>
+                        </div>
+                    </div>
+                    <div class="branding">
+                        <img src="icons/ignyt.jpg"  alt="" style="width:3rem">
+                    </div>
+                    <div class="time flex items-center">
+                        <img src="icons/clock.svg" alt="">
+                        <div>
+                            <h5>Working Hours:</h5>
+                            <h6>Mon - Sat (8.00am - 12.00am)</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar magic-shadow">
+                <div class="container flex justify-center">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">About us</a>
+                    <a href="#">Products</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Shop</a>
+                    <a href="#">Services</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Contact us</a>
+                </div>
+            </div>
+        </nav>
+        
+  
+    <div id="form">
+
+        <div id="box1">
+            <h1 class="fo-head2">Order Placed Succesfully</h1>
+            <% for(let i=0;i<item.length;i++){ %>
+               <p class="label" style="margin:1rem"><%= alc[item[i]]%>  <b>x<%=qty[item[i]]%></b>  - Rs.<%=temc[i]%></p>
+               <%}%>
+            <p class="label" style="margin:1rem"><b>Total: Rs.<%=total%></b></p>
+        </div>
+    </div>
+    </body>
+</html>
